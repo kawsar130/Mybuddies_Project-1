@@ -1,0 +1,165 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: roboto;
+	padding: 10px;
+	background: rgba(255,288,196,0.5);
+}
+
+.topnav {
+	overflow: hidden;
+	background: lightslategray;
+	border-radius: 0px 20px 0px 20px;
+}
+
+.topnav a {
+	float: left;
+	display: block;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	padding: 25px;
+}
+
+.topnav a:hover {
+	background: darkslategray;
+	border-radius: 0px 20px 0px 20px;
+	color: lemonchiffon;
+	font-weight: bold;
+	transition: all 0.5s ease;
+}
+
+.coverdiv {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+}
+
+.cover {
+	background: #fff url("Images/coverfinal.jpg") no-repeat center center fixed;
+	overflow: hidden;
+	background-size: cover;
+	width: 100%;
+	height: 35vw;
+	border-radius: 0px 20px 0px 20px;
+	text-align: left;
+	font-size: 5vw;
+	font-weight: bold;
+	line-height: 6.5vw;
+	margin: 20px 0;
+	/*background: linear-gradient(darkseagreen, rgba(220,20, 255, 0.5));*/
+	color: papayawhip;
+}
+
+.covertxt {
+	padding-top: 4vw;
+	padding-left: 10vw;
+}
+
+.container {
+	display: block;
+	background: rgba(240, 220, 200, 0.5);
+	border-radius: 0px 20px 0px 20px;
+	padding-bottom: 7em;
+}
+
+.buddiestag {
+	text-align: center;
+	padding: 1em;
+	font-size: 4vmax;
+	color: seagreen;
+}
+
+.list {
+	display: grid;
+	grid-gap: 7em;
+	grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+	padding: 0em 5em;
+}
+
+.list .box {
+	display: grid;
+	font-size: 3em;
+	border: 2px solid springgreen;
+	color: seagreen;
+	background: linear-gradient(lightblue, lemonchiffon);
+	border-radius: 0px 20px 0px 20px;
+	height: 10em;
+	box-shadow: rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+	transition: all 0.5s ease;
+}
+
+.list .box:hover {
+	box-shadow: 20px 20px 20px;
+	border-radius: 20px 0px 20px 0px;
+	transition: all 1s ease;
+}
+
+.box .img {
+	display: grid;
+	align-self: center;
+	justify-self: center;
+	transition: all 0.5s ease;
+}
+
+.img img {
+	width: 9em;
+	height: auto;
+	border: 10px solid white;
+	border-radius: 20px 0px 20px 0px;
+	transition: all 0.5s ease;
+}
+
+.img img:hover {
+	box-shadow: rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+	transform: scale(1.1);
+	border-radius: 0px 20px 0px 20px;
+	transition: all 1s ease;
+}
+
+footer {
+	background: linear-gradient(lightskyblue, cornsilk);
+	text-align: center;
+	padding: 2em;
+	margin-top: 10px;
+	border-bottom-left-radius: 20px;
+	border-top-right-radius: 20px;
+	font-family: monospace;
+	font-size: 2em;
+	color: darkslateblue;
+	transition: all 0.5s ease;
+}
+
+footer:hover {
+	border-radius: 50px 0px 50px 0px;
+	color: black;
+	border: 1px dotted navy;
+	transition: all 1s ease;
+}
+
+@media screen and (max-width: 800px) {
+	.topnav a {
+		float: none;
+		width: 100%;
+	}
+
+	.list {
+		width: 100%;
+		padding: 10px;
+		justify-items: center;
+	}
+
+	.box {
+		width: 90%;
+	}
+
+	.img img {
+		width: 8em;
+	}
+
+	.buddiestag {
+		font-size: 4vmax;
+	}
+}
