@@ -74,18 +74,21 @@ body {
 
 .list {
 	display: grid;
-	grid-gap: 7em;
+	grid-gap: 6em;
 	grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 	padding: 0em 5em;
+	justify-items: center;
 }
 
 .list .box {
 	display: grid;
 	font-size: 3em;
+	justify-items: center;
 	border: 2px solid springgreen;
 	color: seagreen;
 	background: linear-gradient(lightblue, lemonchiffon);
 	border-radius: 0px 20px 0px 20px;
+	width: 11em;
 	height: 10em;
 	box-shadow: rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 	transition: all 0.5s ease;
@@ -124,11 +127,9 @@ footer {
 	text-align: center;
 	padding: 2em;
 	margin-top: 10px;
-	border-bottom-left-radius: 20px;
-	border-top-right-radius: 20px;
-	font-family: monospace;
-	font-size: 2em;
-	color: darkslateblue;
+	border-radius: 0px 20px 0px 20px;
+	font-size: 2vmax;
+	color: purple;
 	transition: all 0.5s ease;
 }
 
@@ -145,21 +146,108 @@ footer:hover {
 		width: 100%;
 	}
 
-	.list {
-		width: 100%;
-		padding: 10px;
-		justify-items: center;
+	.cover {
+		background: #fff url("Images/coverfinal.jpg") no-repeat center center fixed;
 	}
 
-	.box {
-		width: 90%;
+	.list {
+		float: none;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.list .box {
+		width: 70vw;
+		height: 6em;
+		margin: 0;
+		padding: 10px;
 	}
 
 	.img img {
-		width: 8em;
+		width: 6em;
 	}
 
 	.buddiestag {
 		font-size: 4vmax;
+	}
+}
+
+/*@media screen and (max-width: 770px) {
+
+	.list {
+		padding-bottom: 2em;
+	}
+
+	.list .box {
+		width: 14em;
+		height: 11em;
+		padding: 0;
+		margin: 0;
+	}
+
+	.img img {
+		width: 12em;
+	}
+}*/
+
+@media screen and (max-width: 450px) {
+
+	.cover {
+		background: #fff url("Images/coverfinal.jpg") no-repeat center top fixed;
+		background-size: 900px;
+	}
+
+	.list {
+		padding-bottom: 2em;
+		justify-content: center;
+	}
+
+	.list .box {
+		width: 7.5em;
+		padding: 0;
+		margin: 0;
+	}
+
+	.img img {
+		width: 6.5em;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.container {
+		padding-bottom: 2em;
+	}
+
+	.list .box {
+		width: 6.5em;
+		padding: 0;
+		margin: 0;
+	}
+
+	.img img {
+		width: 6em;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.list .box {
+		width: 5.8em;
+		padding: 0;
+		margin: 0;
+	}
+
+	.img img {
+		width: 5em;
+	}
+}
+
+@media screen and (max-width: 280px) {
+	.list .box {
+		width: 5em;
+	}
+
+	.img img {
+		width: 4.5em;
 	}
 }
